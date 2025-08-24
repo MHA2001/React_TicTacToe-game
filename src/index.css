@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto Slab', sans-serif;
+	line-height: 1.5;
+	color: #ebe7ef;
+	background: radial-gradient(
+			circle at top,
+			rgba(241, 210, 70, 0.98),
+			rgba(250, 176, 103, 0.87)
+		),
+		url('bg-pattern-dark.png');
+	background-repeat: repeat;
+	background-size: 100% 100%, 30% 30%;
+	min-height: 110rem;
+}
