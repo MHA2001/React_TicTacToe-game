@@ -24,6 +24,12 @@ body {
 	background-repeat: repeat;
 	background-size: 100% 100%, 30% 30%;
 	min-height: 110rem;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 header {
@@ -133,6 +139,20 @@ h1 {
 	text-align: center;
 	text-transform: uppercase;
 }
+#pre-game {
+	text-align: center;
+}
+
+#pre-game button {
+	cursor: pointer;
+	background: none;
+	color: #f8c031;
+	border: none;
+	font-family: 'Caprasimo', cursive;
+	font-size: 4rem;
+	text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	animation: pulse-text-size 2s infinite ease-out;
+}
 
 #game-board {
 	display: flex;
@@ -235,6 +255,32 @@ h1 {
 	box-shadow: 0 0 20px rgba(255, 187, 0, 0.8);
 }
 
+#game-hints {
+	text-align: center;
+	color: #46432f;
+}
+
+#game-hints h2 {
+	font-family: 'Caprasimo', cursive;
+	font-size: 2rem;
+	margin: 0;
+}
+
+#game-hints ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#game-hints button {
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	color: #23221f;
+	font: inherit;
+	margin-top: 1.5rem;
+}
+
 @keyframes pulse {
 	0% {
 		border-color: #f6e35a;
@@ -259,5 +305,42 @@ h1 {
 	}
 	100% {
 		color: #e1dec7;
+	}
+}
+
+@keyframes slide-in-from-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-30%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes pulse-text-size {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes pop-in {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	80% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
 	}
 }
